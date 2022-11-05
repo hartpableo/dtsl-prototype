@@ -1,20 +1,27 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url(./bootstrap-icons/font/bootstrap-icons.css);
+.section-heading {
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  font-weight: unset;
+  font-family: "Fredoka One", cursive;
+}
+
 @keyframes upDown {
   0%, 100% {
-    transform: translateY(10%);
+    transform: translateY(1.5px);
   }
   50% {
-    transform: translateY(-10%);
+    transform: translateY(-1.5px);
   }
 }
 @keyframes upDown-minimal {
   0%, 100% {
-    transform: translateY(0.65rem);
+    transform: translateY(3px);
   }
   50% {
-    transform: translateY(-0.65rem);
+    transform: translateY(-3px);
   }
 }
 /* Text meant only for screen readers. */
@@ -7080,7 +7087,9 @@ textarea.form-control-lg {
   position: static !important;
 }
 
-.position-relative, #showcase, .founder-card, .company-card {
+.position-relative, #showcase, .founder-card, .company-card, section,
+header,
+footer {
   position: relative !important;
 }
 
@@ -9299,7 +9308,7 @@ textarea.form-control-lg {
   .gap-md-5 {
     gap: 3rem !important;
   }
-  .text-md-start, footer#footer .footer-top .footer-nav {
+  .text-md-start {
     text-align: left !important;
   }
   .text-md-end {
@@ -9795,7 +9804,7 @@ textarea.form-control-lg {
   .gap-lg-5 {
     gap: 3rem !important;
   }
-  .text-lg-start, #showcase .showcase--content {
+  .text-lg-start, footer#footer .footer-top .footer-nav, #showcase .showcase--content {
     text-align: left !important;
   }
   .text-lg-end {
@@ -11015,12 +11024,12 @@ footer {
 }
 
 .article-card {
-  max-width: 22.625rem;
   border-radius: 35px;
   background: #fff;
   outline: 1px solid #ddd;
   box-shadow: 5px 3px 9px rgba(0, 0, 0, 0.19);
   padding: 1.563rem;
+  margin: 0.78em;
 }
 .article-card:hover {
   animation-name: upDown-minimal;
@@ -11055,7 +11064,7 @@ footer {
 }
 .article-card--info__header .article-card-title {
   font-size: 2.188rem;
-  line-height: 2.625em;
+  line-height: 1.75em;
   font-weight: unset;
   color: #FF574A;
   margin: 0;
@@ -11435,7 +11444,7 @@ footer {
   position: absolute;
   top: auto;
   right: auto;
-  bottom: 0;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   line-height: 1;
@@ -11509,6 +11518,59 @@ footer {
   font-weight: 300;
 }
 
+#news {
+  background-color: #FFA14A;
+}
+#news .container {
+  padding: 2.5rem 1.563rem;
+}
+@media (min-width: 992px) {
+  #news .container {
+    padding: 0 1.563rem 2.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  #news .container {
+    padding: 0 0 6.125rem;
+  }
+}
+#news h2, #news .h2 {
+  font-size: 3.75rem;
+  line-height: 1.22em;
+  font-weight: unset;
+  font-family: "Fredoka One", cursive;
+  color: #fff;
+  margin-bottom: 1.563rem;
+}
+#news .articles-slider {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 46.75rem;
+}
+@media (min-width: 1200px) {
+  #news .articles-slider {
+    margin: 0 auto 0 0;
+    vertical-align: middle;
+  }
+}
+#news .slider-nav {
+  margin-top: 1.563rem;
+}
+@media (min-width: 1200px) {
+  #news .slider-nav {
+    vertical-align: middle;
+    margin-left: 4.688rem;
+  }
+}
+#news .section-hero {
+  position: absolute;
+  top: auto;
+  right: -6.25rem;
+  bottom: 0;
+  left: auto;
+  pointer-events: none;
+}
+
 footer#footer {
   position: relative;
   background-color: #8429F2;
@@ -11558,6 +11620,7 @@ footer#footer .footer-top .gmap {
     bottom: auto;
     left: auto;
     transform: translateY(-50%);
+    top: 57%;
     border-radius: 50%;
     width: 23.625rem;
     height: 23.625rem;
