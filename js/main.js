@@ -29,14 +29,32 @@ function activateSlick() {
                     slidesToShow: 2,
                     centerMode:false,
                 },
-                // breakpoint: 992,
-                // settings: {
-                //     slidesToShow: 2,
-                //     centerMode:false,
-                // },
             }
         ],
-      });
+    });
+
+    $('.image-slider--wrapper').slick({
+        autoplay: true,
+        autoplaySpeed: 2650,
+        slidesToScroll: 1,
+        arrows: false,
+        mobileFirst: true,
+        pauseOnFocus: true,
+        pauseOnHover: false,
+        respondTo: 'slider',
+        slidesToShow: 2,
+        responsive: [
+            {   
+                breakpoint: 575,
+                settings: {
+                slidesToShow: 3,
+            }},
+            { breakpoint: 767,
+                settings: {
+                slidesToShow: 4,
+            }},
+        ],
+    });
 }
 
 // update year in copyright section
