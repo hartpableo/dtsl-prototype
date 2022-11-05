@@ -63,10 +63,18 @@
 }
 
 .section-heading {
-  font-size: 3.75rem;
-  line-height: 3.75em;
+  font-size: 2.75rem;
+  line-height: 1.2em;
   font-weight: unset;
+  font-family: "Fredoka One", cursive;
   color: inherit;
+}
+@media (min-width: 992px) {
+  .section-heading {
+    font-size: 3.75rem;
+    line-height: 1.22em;
+    font-weight: unset;
+  }
 }
 
 .button-reset, .modal-button-close, .poster#funetix-poster .modal-button, .slider-nav__button button {
@@ -7063,7 +7071,7 @@ textarea.form-control-lg {
   display: inline-flex !important;
 }
 
-.d-none, #showcase::after, #header::before {
+.d-none, #call-to-action::after, #showcase::after, #header::before {
   display: none !important;
 }
 
@@ -9830,7 +9838,7 @@ footer {
   .d-xl-inline-block {
     display: inline-block !important;
   }
-  .d-xl-block, #header::before {
+  .d-xl-block, #call-to-action::after, #header::before {
     display: block !important;
   }
   .d-xl-grid {
@@ -10898,11 +10906,19 @@ footer {
 .theme-button {
   border-radius: 999px;
   color: #fff;
-  font-size: 1.563rem;
-  line-height: 1.52em;
-  font-weight: 700;
   border: none;
-  padding: 1.313rem 3.688rem;
+  font-size: 1.125rem;
+  line-height: 1.1em;
+  font-weight: 700;
+  padding: 1.313rem 3.488rem;
+}
+@media (min-width: 1200px) {
+  .theme-button {
+    font-size: 1.563rem;
+    line-height: 1.1em;
+    font-weight: 700;
+    padding: 1.313rem 3.688rem;
+  }
 }
 .theme-button:hover {
   background: linear-gradient(to bottom, #20B1F0, #66E3FF) !important;
@@ -11233,21 +11249,20 @@ footer {
   margin-bottom: 0.938rem;
   font-family: "Fredoka One", cursive;
   font-size: 2.5rem;
-  line-height: 3em;
+  line-height: 1.1em;
   font-weight: unset;
   color: #FF574A;
 }
 .mv-card--heading-sub {
   font-size: 1.25rem;
-  line-height: 1.875em;
+  line-height: 1.1em;
   font-weight: 500;
-  margin-bottom: -0.563rem;
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
 .mv-card--body {
   font-size: 1rem;
-  line-height: 1.375em;
+  line-height: 1.4em;
   font-weight: 400;
 }
 .mv-card--body p {
@@ -11535,10 +11550,6 @@ footer {
   }
 }
 #news h2, #news .h2 {
-  font-size: 3.75rem;
-  line-height: 1.22em;
-  font-weight: unset;
-  font-family: "Fredoka One", cursive;
   color: #fff;
   margin-bottom: 1.563rem;
 }
@@ -11569,6 +11580,66 @@ footer {
   bottom: 0;
   left: auto;
   pointer-events: none;
+}
+
+#call-to-action {
+  overflow: hidden;
+}
+#call-to-action::after {
+  content: "";
+  position: absolute;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 363.3px;
+  background: url(../images/cta-wave.png) no-repeat center bottom/100% 100%;
+  pointer-events: none;
+}
+@media (min-width: 1200px) {
+  #call-to-action {
+    padding-top: 6.188rem;
+    padding-bottom: 19.188rem;
+  }
+}
+@media (min-width: 1200px) {
+  #call-to-action .section-info {
+    max-width: 30.188rem;
+  }
+}
+#call-to-action .section-info--heading, #call-to-action footer#footer .footer-heading, footer#footer #call-to-action .footer-heading {
+  color: #27B151;
+}
+@media (min-width: 768px) {
+  #call-to-action .section-info--heading, #call-to-action footer#footer .footer-heading, footer#footer #call-to-action .footer-heading {
+    font-size: 3.25rem;
+    line-height: 1.22em;
+    font-weight: unset;
+  }
+}
+@media (min-width: 1200px) {
+  #call-to-action .section-info--heading, #call-to-action footer#footer .footer-heading, footer#footer #call-to-action .footer-heading {
+    font-size: 3.125rem;
+    line-height: 1.22em;
+    font-weight: unset;
+  }
+}
+#call-to-action .section-info--body {
+  margin: 1.563rem auto;
+}
+@media (min-width: 992px) {
+  #call-to-action .section-info--body {
+    margin: 1.875rem 0 3.125rem;
+  }
+}
+#call-to-action .section-info--buttons {
+  row-gap: 1rem;
+}
+#call-to-action .mv-cards {
+  gap: 0.938rem;
 }
 
 footer#footer {
