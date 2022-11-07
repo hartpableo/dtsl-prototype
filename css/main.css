@@ -11170,7 +11170,17 @@ footer {
 .founder-card {
   width: 100%;
   max-width: 73.438rem;
-  margin: 0 auto;
+  margin: 10.688rem auto 0;
+}
+@media (min-width: 992px) {
+  .founder-card {
+    margin-top: 11.688rem;
+  }
+}
+@media (min-width: 1200px) {
+  .founder-card {
+    margin-top: 0;
+  }
 }
 .founder-card--image {
   overflow: hidden;
@@ -11223,7 +11233,7 @@ footer {
 }
 @media (min-width: 1200px) {
   .founder-card--body {
-    padding: 3.938rem 5.75rem;
+    padding: 2.5rem 1.563rem 2.5rem 9.2rem;
     margin: 0 0 0 auto;
   }
 }
@@ -11771,6 +11781,46 @@ footer {
     right: -5.625rem;
     bottom: 27.5rem;
     left: auto;
+  }
+}
+
+#about {
+  isolation: isolate;
+}
+#about .bg-image {
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: -1.78rem;
+  left: -3.5rem;
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  #about {
+    padding-bottom: 7.813rem;
+    padding-top: 10rem;
+  }
+}
+#about .section-info {
+  margin-top: 1.875rem;
+}
+@media (min-width: 1200px) {
+  #about .section-info {
+    margin-top: 9.5rem;
+  }
+}
+#about .section-info--buttons {
+  gap: 0.938rem;
+}
+@media (max-width: 992px) {
+  #about .section-info--buttons a {
+    padding: 1.313rem 0.888rem;
+  }
+}
+@media (max-width: 768px) {
+  #about .section-info--buttons a {
+    width: 100%;
+    max-width: 20.625rem;
   }
 }
 
