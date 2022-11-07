@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    // animate elements
+    new WOW().init();
+    
     // update year in copyright section
     updateYear();
 
